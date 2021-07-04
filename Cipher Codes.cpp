@@ -41,4 +41,32 @@ void main()
 		}
 		cout << "Encrypted message: " << message;
 	}
+	
+	else if (choice == 2)
+	{
+		char ch;
+		for (int i = 0; message[i] != '\0'; i++)
+		{
+			ch = message[i];
+			if (ch >= 'a' && ch <= 'z')					//Lowercase Decryption
+			{
+				ch = ch - key;
+				if (ch > 'z')
+				{
+					ch = ch + 'z' - 'a' + 1;
+				}
+				message[i] = ch;
+			}
+			else if (ch >= 'A' && ch <= 'Z')			//Uppercase Decryption
+			{
+				ch = ch - key;
+				if (ch > 'Z')
+				{
+					ch = ch + 'Z' - 'A' + 1;
+				}
+				message[i] = ch;
+			}
+		}
+		cout << "Encrypted message: " << message;
+	}
 }

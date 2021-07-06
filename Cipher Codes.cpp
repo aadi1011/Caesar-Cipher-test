@@ -7,16 +7,27 @@ using namespace std;
 
 void main()
 {
-	char message[1000];					// maximum permissible text - 1000 chars. To increase size of message, increase values of message[x] at line 10 and 13.			
-	int key, choice;					// key= the number of letters to shift ahead
-	cout << "Enter message to encrypt/decrypt" << endl;	
-	cin.getline(message, 1000);				// inputs message from user
+start:
+	char message[1000];
+	int key;
+	cout << "Enter message to encrypt/decrypt\n\n--> ";
+	cin.getline(message, 1000);
+	system("cls");
+	cout << "Message: " << message << endl;
 	cout << endl << "Enter key: ";
-	cin >> key;						// inputs key from user
-	int length = strlen(message);				// counts the number of char in message and stores in 'length'
-	cout << "Enter your choice: \n1. Encrypt\n2. Decrypt";
-	cin >> choice;						// inputs choice to encrypt or decrypt from user
+	cin >> key;
+	int length = strlen(message);
+	system("cls");
+	cout << "Message: " << message << "\nkey: " << key << endl;
+	goto choice;						
 
+choice:
+	int choice;
+	cout << "\nEnter your choice: \n1. Encrypt\n2. Decrypt\n\n--> ";
+	cin >> choice;
+	goto sort;
+	
+sort:
 	if (choice == 1)
 	{
 		char ch;

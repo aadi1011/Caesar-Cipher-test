@@ -11,6 +11,7 @@ start:
 	char message[1000];
 	int key;
 	cout << "Enter message to encrypt/decrypt\n\n--> ";
+	cin.ignore(2, '\n');								//prevents the cin.getline skip when looping 
 	cin.getline(message, 1000);
 	system("cls");
 	cout << "Message: " << message << endl;

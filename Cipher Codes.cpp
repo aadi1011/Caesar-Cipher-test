@@ -102,7 +102,7 @@ exit:
 	if (askexit == 'n' || askexit == 'N')
 	{
 		system("cls");
-		cout << "Thank you for using the cipher.";
+		cout << "Thank you for using the cipher.\n\n";
 		exit(0);
 	}
 	else if (askexit == 'y' || askexit == 'Y')

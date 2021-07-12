@@ -11,13 +11,8 @@ start:
 	char message[1000];					// maximum permissible text - 1000 chars. To increase size of message, increase values of message[x] at line 10 and 13.
 	int key;						// key= the number of letters to shift ahead
 	cout << "Enter message to encrypt/decrypt\n\n--> ";
-ProxyHydra-patch-2
-	cin.ignore(2, '\n');								//prevents the cin.getline skip when looping 
-	cin.getline(message, 1000);
-
-  cin.ignore(2, '\n');								//prevents the cin.getline skip when looping 
+	cin.ignore(2, '\n');					//prevents the cin.getline skip when looping
 	cin.getline(message, 1000);				// inputs message from user
-main:
 	system("cls");
 	cout << "Message: " << message << endl;
 	cout << endl << "Enter key: ";

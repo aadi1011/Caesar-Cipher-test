@@ -9,15 +9,15 @@ void main()
 {
 start:
 	char message[1000];										// maximum permissible text - 1000 chars. To increase size of message, increase values of message[x] at line 10 and 13.
-	int key;												// key = the number of letters to shift ahead
+	int key;											// key = the number of letters to shift ahead
 	cout << "Enter message to encrypt/decrypt\n\n--> ";
-	cin.ignore(2, '\n');									//prevents the cin.getline skip when looping
-	cin.getline(message, 1000);								// inputs message from user
+	cin.ignore(2, '\n');										//prevents the cin.getline skip when looping
+	cin.getline(message, 1000);									// inputs message from user
 	system("cls");
 	cout << "Message: " << message << endl;
 	cout << endl << "Enter key: ";
-	cin >> key;												// inputs key from user
-	int length = strlen(message);							// counts the number of char in message and stores in 'length'
+	cin >> key;											// inputs key from user
+	int length = strlen(message);									// counts the number of char in message and stores in 'length'
 	system("cls");
 	cout << "Message: " << message << "\nkey: " << key << endl;
 	goto choice;						
@@ -35,7 +35,7 @@ sort:
 		for (int i = 0; message[i] != '\0'; i++)
 		{
 			ch = message[i];
-			if (ch >= 'a' && ch <= 'z')						//Lowercase Encryption
+			if (ch >= 'a' && ch <= 'z')							//Lowercase Encryption
 			{
 				ch = ch + key;
 				if (ch>'z')
@@ -44,7 +44,7 @@ sort:
 				}
 				message[i] = ch;
 			}	
-			else if (ch >= 'A' && ch <= 'Z')				//Uppercase Encryption
+			else if (ch >= 'A' && ch <= 'Z')						//Uppercase Encryption
 			{
 				ch = ch + key;
 				if (ch > 'Z')
@@ -65,7 +65,7 @@ sort:
 		for (int i = 0; message[i] != '\0'; i++)
 		{
 			ch = message[i];
-			if (ch >= 'a' && ch <= 'z')						//Lowercase Decryption
+			if (ch >= 'a' && ch <= 'z')							//Lowercase Decryption
 			{
 				ch = ch - key;
 				if (ch > 'z')
@@ -74,7 +74,7 @@ sort:
 				}
 				message[i] = ch;
 			}
-			else if (ch >= 'A' && ch <= 'Z')				//Uppercase Decryption
+			else if (ch >= 'A' && ch <= 'Z')						//Uppercase Decryption
 			{
 				ch = ch - key;
 				if (ch > 'Z')

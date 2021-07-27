@@ -2,7 +2,7 @@
 
 </br>
 </br>
-<b>NOTE: This repository is no longer managed and used. See the repository Caesar-Cipher-2 for the latest updates. Thank you</b>
+<b>NOTE: This repository is no longer managed and used. See the repository Caesar-Cipher-2 [github.com/ProxyHydra/Caesar-Cipher-2] for the latest updates. Thank you</b>
 
 </br>
 </br>
